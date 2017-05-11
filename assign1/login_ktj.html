@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<title>Login Page</title>
+	<style type="text/css">
+		body { background-color: #b9bbbf; } 
+		.button {
+    background-color: #424746;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: relative;
+    left: 130px;
+}
+   /* .blink {
+		text-decoration: blink;
+	    -webkit-animation-name: blinker;
+		-webkit-animation-duration: 0.1s;
+	    -webkit-animation-iteration-count:30;
+	    -webkit-animation-timing-function:linear;
+	    -webkit-animation-direction: alternate;
+	}
+	 @-webkit-keyframes blinker 
+	 {
+            from {color: red; }
+            to {color: yellow;}
+     }  */
+     input[type=text]:focus {
+   opacity: 0.8;
+}    
+     input[type=password]:focus {
+    opacity: 0.8;
+}
+	</style>
+</head>
+<body>
+<div style="margin: 0;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+    <!--<p class="blink" style="font-family: helvetica; font-size: 30px; ">KTJ LOGIN PAGE</p><br><br>-->
+	Username : <input type="text-align" name="usn" value="Enter your user name" size="35px" style="text-align: left;  background-color: white; font-family: helvetica;  padding-left: 10px;"><br><br>
+	Password : <input type="Password" name="psd"  size="35px" style="text-align:left;  background-color: white; font-family: helvetica; padding-left: 10px;"><br><br>
+	<input type="checkbox" name="rem" style=" background-color: white; font-family: helvetica;margin-left: 130px; position: relative; left: -5px;">Remember Me<br><br>
+	<button class="button">Login</button><br><br>
+    <a href="#" style="font-family: helvetica; color: black; position: relative; left: 70px; font-size: 15px;">Forgot Password |<a href="#" style="font-family: helvetica; color: black;font-size: 15px;position: relative; left: 70px;"> Sign Up for free </a></a>
+</div>
+<img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/IIT_Kharagpur_Logo.svg/686px-IIT_Kharagpur_Logo.svg.png" class="img-responsive" style="height: 80px; width: 80px; float: left; margin-top: 20px; margin-left: 20px">
+<img src="https://upload.wikimedia.org/wikipedia/en/7/73/Kshitij_Logo.png" class="img-responsive" style="float: right; margin-top: 20px; margin-right: 20px; height: 80px; width: 80px;"> 
+</body>
+</html>
