@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>Discussion Page</title>
+	<style type="text/css">
+		#kgp {
+			height: 80px;
+			width: 80px;
+			float: left;
+			border-radius: 50%;
+		}
+		#ktj {
+			height: 80px;
+			width: 80px;
+			float: right;
+			border-radius: 50%;
+		}
+        body {
+        	background-color: lightgray;
+        }
+        #div1 {
+        	text-align: center;
+        	margin-top: 150px;
+        }
+        #topicName {
+        	padding: 5px;
+        }
+        #topic {
+        	padding: 5px;
+        	width: 100px;
+        }
+        #NEWTOPIC {
+            padding:5px;
+            text-align: center;
+        }
+        #jumbo {
+            text-align: left;
+            padding: 10px;
+            margin-top: 20px;
+
+        }
+        #textarea {
+            margin-left: 90px;
+            padding: 10px;
+        }
+        #buttoncreate {
+            margin-left: 70px;
+        }
+        #para {
+            padding-left: 20px;
+
+        }
+	</style>
+</head>
+<body>
+<div class="container">
+<img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/IIT_Kharagpur_Logo.svg/686px-IIT_Kharagpur_Logo.svg.png" class="img-responsive" id="kgp">
+<img src="https://upload.wikimedia.org/wikipedia/en/7/73/Kshitij_Logo.png" class="img-responsive" id="ktj">
+<div id="div1">
+	<input type="text" name="text" placeholder="Search" id="topicName">
+	<button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-search"></span> Search</button><br><br>
+    <button type="button" class="btn btn-info" id="topic" data-toggle="modal" data-target="#myModal">New Topic</button>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="model-dialog model-lg">
+            <div class="model-content">
+                <div class="model-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" id="NEWTOPIC">Create new Topic</h4>  
+                </div>
+                <div class="model-body">
+                    <form id="topicForm">
+                        Topic Name : <input type="text" name="topicName" placeholder="Enter the Name of the Topic" id="topicName" 
+                        size="30"><br>
+                        <br>
+                        <textarea name="initial message" rows="10" cols="30" placeholder="write your initial message" id="textarea"></textarea>
+                        <br><br>                         
+                        <button type="button" class="btn btn-default" id="buttoncreate" data-dismiss="modal">Create Topic
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="jumbotron" id="jumbo">
+    <h2 style="text-align: center;">KTJ Summer Workshop 2k17</h2>
+    <p id="para">
+        <a href="Discussion_thread.html" id="topic" >Assignment 1</a><br>
+        <a href="Discussion_thread.html" id="topic" >The Web Tutorials</a><br>
+        <a href="Discussion_thread.html" id="topic" >Assignment 2 Doubts</a><br>
+        <a href="Discussion_thread.html" id="topic" >HTML & CSS Doubts</a><br>
+        <a href="Discussion_thread.html" id="topic" >JQUERY & BOOTSTRAP Doubts</a><br>
+    </p>
+</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function () {
+    
+    $("#buttoncreate").click(function () {
+        var new = $("#topicName").val();
+        
+    });
+});
+</script>
+</script>
+</body>
+</html>
