@@ -64,9 +64,9 @@
     </style>
 </head>
 <body>
-<div class="container">
-<img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/IIT_Kharagpur_Logo.svg/686px-IIT_Kharagpur_Logo.svg.png" class="img-responsive" id="kgp">
-<img src="https://upload.wikimedia.org/wikipedia/en/7/73/Kshitij_Logo.png" class="img-responsive" id="ktj">
+<div class="container-fluid"> 
+<a href="http://iitkgp.ac.in"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/IIT_Kharagpur_Logo.svg/686px-IIT_Kharagpur_Logo.svg.png" class="img-responsive" id="kgp"></a> 
+<a href="https://en.wikipedia.org/wiki/Kshitij"><img src="https://upload.wikimedia.org/wikipedia/en/7/73/Kshitij_Logo.png" class="img-responsive" id="ktj" ></a> 
 <div id="div1">
     <input type="text" name="text" placeholder="Search" id="topicName">
     <button type="button" class="btn btn-danger" id="searchButton"><span class="glyphicon glyphicon-search"></span> Search</button><br><br>
@@ -96,7 +96,7 @@
 <div class="jumbotron" id="jumbo">
     <h2 style="text-align: center;">KTJ Summer Workshop 2k17</h2>
     <p id="para" class="topicList">
-       <a href="document_thread.html" class="topic">HTML and CSS Doubts</a><br>
+       <a href="document_thread.html" class="topic">HTML AND CSS DOUBTS</a><br>
        <a href="document_thread.html" class="topic">JQUERY AND BOOTSTRAP</a><br>
        <a href="document_thread.html" class="topic">ASSIGNMENT 2 DOUBTS</a><br>
     </p>
@@ -106,13 +106,11 @@
 var i;
 var topicsArray = [];
 var x = $("p.topicList > a").toArray();
-    for(i=0;i<x.length;i++)
-        {
-            x[i].toLowerCase();
-            topicsArray.push(a.innerHTML);
-        }
+   for(i=0;i<x.length;i++) {
+topicsArray.push(x[i].innerHTML.toLowerCase());
+}
 $("#searchButton").click(function (x) {
-    var n = getElementById("topicName").val();
+    var n = getElementById('topicName').value;
     var l = n.toLowerCase();
     var k = jQuery.inArray( l , topicsArray);
     if (k!=-1) {
@@ -120,8 +118,8 @@ $("#searchButton").click(function (x) {
     };
 });
 $("#buttoncreate").click(function (c) {
-    var value = document.getElementById("#topicName").val();
-    $("#para").append("<a href='document_thread.html'>" + value + "</a>");
+    var v = document.getElementById('topicName').value;
+    $("#para").append("<a href='document_thread.html'>" + v + "</a>");
 });
 </script>
 </body>
