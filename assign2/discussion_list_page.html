@@ -110,7 +110,7 @@ var x = $("p.topicList > a").toArray();
 topicsArray.push(x[i].innerHTML.toLowerCase());
 }
 $("#searchButton").click(function (x) {
-    var n = getElementById('topicName').value;
+    var n = $("#topicName").val();
     var l = n.toLowerCase();
     var k = jQuery.inArray( l , topicsArray);
     if (k!=-1) {
@@ -118,8 +118,8 @@ $("#searchButton").click(function (x) {
     };
 });
 $("#buttoncreate").click(function (c) {
-    var v = document.getElementById('topicName').value;
-    $("#para").append("<a href='document_thread.html'>" + v + "</a>");
+    var v = $("#topicName").val();
+    $("#para").append("<a href="document_thread.html" class="topic">" + v + "</a>");
 });
 </script>
 </body>
