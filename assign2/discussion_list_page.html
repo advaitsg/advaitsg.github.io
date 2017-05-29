@@ -68,7 +68,7 @@
 <a href="http://iitkgp.ac.in"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/IIT_Kharagpur_Logo.svg/686px-IIT_Kharagpur_Logo.svg.png" class="img-responsive" id="kgp"></a> 
 <a href="https://en.wikipedia.org/wiki/Kshitij"><img src="https://upload.wikimedia.org/wikipedia/en/7/73/Kshitij_Logo.png" class="img-responsive" id="ktj" ></a> 
 <div id="div1">
-    <input type="text" name="text" placeholder="Search" id="topicName">
+    <input type="text" name="text" placeholder="Search" id="topicname">
     <button type="button" class="btn btn-danger" id="searchButton"><span class="glyphicon glyphicon-search"></span> Search</button><br><br>
     <button type="button" class="btn btn-info" id="topic" data-toggle="modal" data-target="#myModal">New Topic</button>
     <div class="modal fade" id="myModal" role="dialog">
@@ -113,13 +113,14 @@ $("#searchButton").click(function (x) {
     var n = $("#topicName").val();
     var l = n.toLowerCase();
     var k = jQuery.inArray( l , topicsArray);
-    if (k!=-1) {
+    if (k==-1) {
         alert("Topic not found !");
     }
 });
-$("#buttoncreate").click(function (c) {
+$("#buttoncreate").click(function (x) {
     var v = $("#topicName").val();
-    $("#para").append("<a href='document_thread.html' class='topic'>"+v+"</a>");
+    $("#para").append("<a href='document_thread.html' class='topic'>" + v + "</a>");
+    topicsArray.push(v.toLowerCase());
 });
 </script>
 </body>
