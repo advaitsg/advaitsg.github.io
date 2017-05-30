@@ -1,9 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>discussion thread</title>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -13,21 +11,19 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>Discussion Page.</title>
 	<style type="text/css">
-	    body {
-	    	background-color: lightgrey;
-	    }
-		.textA {
-			text-align: left;
-			font-family: helvetica;
-            margin-top: 20px;
-            margin-left: 20px;
-		}
+		body {background-color: lightgrey;}
+        #input {margin-top: 20px;
+               font-family: helvetica;}
 	</style>
 </head>
 <body>
-	<div class="contianer-fluid">
-	<textarea rows="10" cols="50" type="text" id="input" class="textA"></textarea>
+<div class="container-fluid">
+	<div id="comments">
+		
+	</div>
+	<textarea rows="10" cols="50" type="text" id="input" placeholder="Type your message to the group."></textarea>
 	<input type="button" name="" id="bold" value="Bold">
 	<input type="button" name="" id="italic" value="Italic">
 	<input type="button" name="" value="Underline" id="underline">
@@ -104,8 +100,7 @@
 			var end = value.substring(finalPoint, value.length);
 			input.value = first+"__"+middle+"__"+end;
 		}
-		
 	</script>
-	</div>
+</div>
 </body>
 </html>
