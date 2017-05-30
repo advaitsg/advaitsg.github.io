@@ -38,7 +38,6 @@
 		bold.onclick = function() {
 			var initialPoint = input.selectionStart;
 			var finalPoint = input.selectionEnd;
-			console.log(initialPoint + " " + finalPoint);
 			var value = input.value
 			var first = value.substring(0, initialPoint);
 			var middle = value.substring(initialPoint, finalPoint);
@@ -49,7 +48,6 @@
 		reply.onclick = function() {
 			var value = input.value;
 			var parts = value.split("**");
-			console.log(parts);
 			var comment = "";
 			for(var i=0; i<parts.length; i++) {
 				if(i%2){
@@ -83,7 +81,6 @@
 		italic.onclick = function() {
 			var initialPoint = input.selectionStart;
 			var finalPoint = input.selectionEnd;
-			console.log(initialPoint + " " + finalPoint);
 			var value = input.value
 			var first = value.substring(0, initialPoint);
 			var middle = value.substring(initialPoint, finalPoint);
@@ -93,7 +90,6 @@
 		underline.onclick = function() {
 			var initialPoint = input.selectionStart;
 			var finalPoint = input.selectionEnd;
-			console.log(initialPoint + " " + finalPoint);
 			var value = input.value
 			var first = value.substring(0, initialPoint);
 			var middle = value.substring(initialPoint, finalPoint);
