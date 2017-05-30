@@ -105,10 +105,12 @@
 <script type="text/javascript">
 var i;
 var topicsArray = [];
+//var messageArray = [];
 var x = $("p.topicList > a").toArray();
    for(i=0;i<x.length;i++) {
 topicsArray.push(x[i].innerHTML.toLowerCase());
 }
+
 $("#searchButton").click(function (x) {
     var n = $("#topicName").val();
     var l = n.toLowerCase();
@@ -117,11 +119,17 @@ $("#searchButton").click(function (x) {
         alert("Topic not found !");
     }
 });
-$("#buttoncreate").click(function (x) {
+var message = $("#textarea").val();
+
+$("#buttoncreate").click(function (x,y) {
     var v = $("#topicName").val();
-    $("#para").append("<a href='document_thread.html' class='topic'>" + v + "</a>");
+    $("#para").append("<a href='document_thread.html' class='topic'>" + v + "</a>" + "<br>");
     topicsArray.push(v.toLowerCase());
+    var a = message;
+    
 });
+
+
 </script>
 </body>
 </html>
